@@ -25,11 +25,12 @@ class ListViewController: UITableViewController, UIActivityIndicatable {
     private func initialize() {
         manager = ListItemsManager(delegate: self)
         tableView.register(UINib(nibName: ListViewCell.identifier, bundle: nil), forCellReuseIdentifier: ListViewCell.identifier)
-        tableView.separatorStyle = .none
     }
 
     private func initUI() {
         addCloseButton()
+        title = "List"
+        tableView.separatorStyle = .none
     }
     
     private func reload() {
@@ -38,6 +39,9 @@ class ListViewController: UITableViewController, UIActivityIndicatable {
 
     override func numberOfSections(in tableView: UITableView) -> Int { return 1 }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { return items.count }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat { return 0.01 }
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat { return 0.01 }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ListViewCell.identifier, for: indexPath) as? ListViewCell else { return UITableViewCell() }

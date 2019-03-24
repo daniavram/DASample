@@ -30,6 +30,7 @@
 		8EEB999F2247C50B004C01E0 /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEB999E2247C50B004C01E0 /* Fetcher.swift */; };
 		8EEB99A12247C8A3004C01E0 /* ListItemsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEB99A02247C8A3004C01E0 /* ListItemsDelegate.swift */; };
 		8EEB99A32247CAB7004C01E0 /* UIActivityIndicatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEB99A22247CAB7004C01E0 /* UIActivityIndicatable.swift */; };
+		8EEB99A52247DDB4004C01E0 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEB99A42247DDB4004C01E0 /* Images.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		8EEB999E2247C50B004C01E0 /* Fetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fetcher.swift; sourceTree = "<group>"; };
 		8EEB99A02247C8A3004C01E0 /* ListItemsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemsDelegate.swift; sourceTree = "<group>"; };
 		8EEB99A22247CAB7004C01E0 /* UIActivityIndicatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActivityIndicatable.swift; sourceTree = "<group>"; };
+		8EEB99A42247DDB4004C01E0 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				8EE61C6322478479009D36C8 /* Assets.xcassets */,
+				8EEB99A42247DDB4004C01E0 /* Images.swift */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				8EE61C7F22478B73009D36C8 /* UIViewControllerExtension.swift in Sources */,
 				8EE61C8322478F0C009D36C8 /* UIColorExtension.swift in Sources */,
 				8EEB999F2247C50B004C01E0 /* Fetcher.swift in Sources */,
+				8EEB99A52247DDB4004C01E0 /* Images.swift in Sources */,
 				8EE61C7D2247868E009D36C8 /* UIStoryboardExtension.swift in Sources */,
 				8EE61C8122478D55009D36C8 /* UIButtonExtension.swift in Sources */,
 				8EE61C79224785F2009D36C8 /* ListViewController.swift in Sources */,

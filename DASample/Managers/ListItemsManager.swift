@@ -22,10 +22,10 @@ class ListItemsManager<T: ListItemsDelegate> {
             self.delegate?.didEndFetch()
             
             let stubs: [ListItem] = [
-                ListItem(icon: nil, title: "Error", subtitle: "This item shows an error", status: .error),
-                ListItem(icon: nil, title: "Normal", subtitle: "This is just a regular, normal item; nothing special This is just a regular, normal item; nothing special This is just a regular, normal item; nothing special", status: .normal),
-                ListItem(icon: nil, title: "Warning", subtitle: "Beware; be very ware", status: .warning),
-                ListItem(icon: nil, title: "Success", subtitle: "Yahoo!", status: .success),
+                ListItem(icon: .statusNormal, title: "Normal", subtitle: "This is just a regular, normal item; nothing special This is just a regular, normal item; nothing special This is just a regular, normal item; nothing special", status: .normal),
+                ListItem(icon: .statusWarning, title: "Warning", subtitle: "Beware; be very ware", status: .warning),
+                ListItem(icon: .statusSuccess, title: "Success", subtitle: "Yahoo!", status: .success),
+                ListItem(icon: .statusError, title: "Error", subtitle: "This item shows an error", status: .error),
             ]
             
             self.delegate?.didFetch(stubs)

@@ -27,12 +27,26 @@
                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DpM-gK-V0F">
                     <rect key="frame" x="0.0" y="0.0" width="415" height="131"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L90-3L-xjh">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gpw-pP-Lgk">
                             <rect key="frame" x="0.0" y="0.0" width="60" height="131"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L90-3L-xjh">
+                                    <rect key="frame" x="0.0" y="35.5" width="60" height="60"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="L90-3L-xjh" secondAttribute="height" multiplier="1:1" id="e7u-Bk-bk6"/>
+                                        <constraint firstAttribute="width" constant="60" id="vJq-Ue-MHu"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="60" id="vJq-Ue-MHu"/>
+                                <constraint firstItem="L90-3L-xjh" firstAttribute="leading" secondItem="Gpw-pP-Lgk" secondAttribute="leading" id="Db8-cN-338"/>
+                                <constraint firstItem="L90-3L-xjh" firstAttribute="centerY" secondItem="Gpw-pP-Lgk" secondAttribute="centerY" id="MMo-S2-iwH"/>
+                                <constraint firstItem="L90-3L-xjh" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Gpw-pP-Lgk" secondAttribute="top" id="qHz-qY-odM"/>
+                                <constraint firstAttribute="trailing" secondItem="L90-3L-xjh" secondAttribute="trailing" id="ucv-YX-2WD"/>
+                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="L90-3L-xjh" secondAttribute="bottom" id="ym7-Lm-EFR"/>
                             </constraints>
-                        </imageView>
+                        </view>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aTy-hi-rmE">
                             <rect key="frame" x="60" y="0.0" width="355" height="131"/>
                             <subviews>
@@ -51,6 +65,9 @@
                             </subviews>
                         </stackView>
                     </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="84" id="QhX-Rq-lJv"/>
+                    </constraints>
                 </stackView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
