@@ -21,17 +21,17 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="415" height="131"/>
+            <rect key="frame" x="0.0" y="0.0" width="409" height="78"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DpM-gK-V0F">
-                    <rect key="frame" x="0.0" y="0.0" width="415" height="131"/>
+                    <rect key="frame" x="0.0" y="0.0" width="409" height="78"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gpw-pP-Lgk">
-                            <rect key="frame" x="0.0" y="0.0" width="60" height="131"/>
+                            <rect key="frame" x="0.0" y="0.0" width="60" height="78"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L90-3L-xjh">
-                                    <rect key="frame" x="0.0" y="35.5" width="60" height="60"/>
+                                    <rect key="frame" x="0.0" y="9" width="60" height="60"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="L90-3L-xjh" secondAttribute="height" multiplier="1:1" id="e7u-Bk-bk6"/>
                                         <constraint firstAttribute="width" constant="60" id="vJq-Ue-MHu"/>
@@ -48,16 +48,16 @@
                             </constraints>
                         </view>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aTy-hi-rmE">
-                            <rect key="frame" x="60" y="0.0" width="355" height="131"/>
+                            <rect key="frame" x="60" y="0.0" width="349" height="78"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1w-nh-Iyi">
-                                    <rect key="frame" x="0.0" y="0.0" width="355" height="110.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="349" height="57.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f7A-HC-CCv">
-                                    <rect key="frame" x="0.0" y="110.5" width="355" height="20.5"/>
+                                    <rect key="frame" x="0.0" y="57.5" width="349" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -66,7 +66,7 @@
                         </stackView>
                     </subviews>
                     <constraints>
-                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="84" id="QhX-Rq-lJv"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="QhX-Rq-lJv"/>
                     </constraints>
                 </stackView>
             </subviews>
@@ -79,7 +79,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="85.599999999999994" y="-192.95352323838082"/>
+            <point key="canvasLocation" x="80.799999999999997" y="-216.79160419790108"/>
         </view>
     </objects>
 </document>
