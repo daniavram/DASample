@@ -13,16 +13,21 @@ fileprivate extension UIColor {
     // MARK: - Hex values - Common
     
     static var blue500: UIColor { return .init(hexString: "#2196F3") }
-    static var blue700: UIColor { return .init(hexString: "#1976D2") }
     static var green500: UIColor { return .init(hexString: "#4CAF50") }
-    static var green700: UIColor { return .init(hexString: "#388E3C") }
+    static var red600: UIColor { return .init(hexString: "#E53935") }
+    static var amber500: UIColor { return .init(hexString: "#FFC107") }
+    static var lightGreen500: UIColor { return .init(hexString: "#8BC34A") }
 }
 
 extension UIColor {
     static var primary: UIColor { return .blue500 }
-    static var primaryHighlighted: UIColor { return .blue700 }
+    static var primaryHighlighted: UIColor { return UIColor.blue500.lighten(by: -30) }
     static var secondary: UIColor { return .green500 }
-    static var secondaryHighlighted: UIColor { return .green700 }
+    static var secondaryHighlighted: UIColor { return UIColor.green500.lighten(by: -30) }
+    static var error: UIColor { return .red600 }
+    static var warning: UIColor { return .amber500 }
+    static var success: UIColor { return .lightGreen500 }
+    static var background: UIColor { return .white }
 }
 
 extension UIColor {
