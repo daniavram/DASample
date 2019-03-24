@@ -31,6 +31,7 @@ class ListViewController: UITableViewController, UIActivityIndicatable {
         addCloseButton()
         title = "List"
         tableView.separatorStyle = .none
+        tableView.backgroundColor = .lightBackground
     }
     
     private func reload() {

@@ -17,6 +17,7 @@ fileprivate extension UIColor {
     static var red600: UIColor { return .init(hexString: "#E53935") }
     static var amber500: UIColor { return .init(hexString: "#FFC107") }
     static var lightGreen500: UIColor { return .init(hexString: "#8BC34A") }
+    static var blueGray100: UIColor { return .init(hexString: "#CFD8DC") }
 }
 
 extension UIColor {
@@ -28,6 +29,7 @@ extension UIColor {
     static var warning: UIColor { return .amber500 }
     static var success: UIColor { return .lightGreen500 }
     static var background: UIColor { return .white }
+    static var lightBackground: UIColor { return .blueGray100 }
 }
 
 extension UIColor {

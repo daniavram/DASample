@@ -13,4 +13,5 @@ extension UIImage {
     static var statusNormal = UIImage(named: "statusNormal")!
     static var statusError = UIImage(named: "statusError")!
     static var statusWarning = UIImage(named: "statusWarning")!
+    static var imagePlaceholder = UIImage(named: "imagePlaceholder")!
 }
