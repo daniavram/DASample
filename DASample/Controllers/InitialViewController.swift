@@ -24,12 +24,12 @@ class InitialViewController: UIViewController {
     }
     
     @IBAction func goToListButtonTap(_ sender: Any) {
-        let (navigationController, _) = UIStoryboard.main.instantiateWithNavigationController(ListViewController.self)
+        let (navigationController, _) = UIStoryboard.list.instantiateWithNavigationController(ListViewController.self)
         present(navigationController, animated: true, completion: nil)
     }
     
     @IBAction func goToPhotosButtonTap(_ sender: Any) {
-        let (navigationController, _) = UIStoryboard.main.instantiateWithNavigationController(PhotosViewController.self)
+        let (navigationController, _) = UIStoryboard.photos.instantiateWithNavigationController(PhotosViewController.self)
         present(navigationController, animated: true, completion: nil)
     }
 }

@@ -9,7 +9,9 @@
 import UIKit
 
 extension UIStoryboard {
-    static var main: UIStoryboard { return UIStoryboard(name: "Main", bundle: nil) }
+    static var initial: UIStoryboard { return UIStoryboard(name: "Initial", bundle: nil) }
+    static var list: UIStoryboard { return UIStoryboard(name: "List", bundle: nil) }
+    static var photos: UIStoryboard { return UIStoryboard(name: "Photos", bundle: nil) }
     
     func instantiate<T: UIViewController>(_ viewControllerType: T.Type) -> T {
         let viewControllerIdentifier = String(describing: viewControllerType)

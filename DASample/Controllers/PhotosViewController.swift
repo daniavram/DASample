@@ -8,15 +8,13 @@
 
 import UIKit
 
-class PhotosViewController: UICollectionViewController, UIActivityIndicatable {
+class PhotosViewController: UIViewController, UIActivityIndicatable {
 
     private var photos = [PhotosItem]()
     private var manager: PhotosManager<PhotosViewController>!
     
-    private var contentInsets: UIEdgeInsets = .all(with: 12)
-    private var itemSpacing: CGFloat = 12
-    private var itemHeightRatio: CGFloat = 1.23
-    
+    private var collectionView: UICollectionView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,7 +24,19 @@ class PhotosViewController: UICollectionViewController, UIActivityIndicatable {
     }
 
     private func initialize() {
-        collectionView.register(UINib(nibName: PhotosCell.identifier, bundle: nil), forCellWithReuseIdentifier: PhotosCell.identifier)
+        let layout = PhotosFlowLayout(fitting: view.frame.size,
+                                      columns: 2,
+                                      contentInsets: .all(with: 12),
+                                      itemSpacing: 12)
+        collectionView = UICollectionView(frame: view.frame,
+                                          collectionViewLayout: layout)
+        collectionView.backgroundColor = .clear
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(UINib(nibName: PhotosCell.identifier, bundle: nil),
+                                forCellWithReuseIdentifier: PhotosCell.identifier)
+        view.addSubview(collectionView)
+        
         manager = PhotosManager(delegate: self)
     }
     
@@ -39,44 +49,30 @@ class PhotosViewController: UICollectionViewController, UIActivityIndicatable {
     private func reload() {
         manager.fetch()
     }
-    
-    override func numberOfSections(in collectionView: UICollectionView) -> Int { return 1 }
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int { return photos.count }
+}
 
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotosCell.identifier, for: indexPath) as? PhotosCell else { return UICollectionViewCell() }
-    
-        cell.item = photos.element(at: indexPath.item)
-    
-        return cell
-    }
-    
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+extension PhotosViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
     }
     
-    override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         guard photos.isIndexLast(indexPath.item) else { return }
         reload()
     }
 }
 
-extension PhotosViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = 0.5 * (
-            collectionView.frame.width -
-            contentInsets.left -
-            contentInsets.right -
-            itemSpacing
-        )
-        let height = width * itemHeightRatio
-        return .init(width: width, height: height)
-    }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return contentInsets
-    }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return itemSpacing
+extension PhotosViewController: UICollectionViewDataSource {
+    func numberOfSections(in collectionView: UICollectionView) -> Int { return 1 }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int { return photos.count }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotosCell.identifier, for: indexPath) as? PhotosCell else { return UICollectionViewCell() }
+        
+        cell.item = photos.element(at: indexPath.item)
+        
+        return cell
     }
 }
 
