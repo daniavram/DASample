@@ -1,8 +1,8 @@
 # Xcode
 UserInterfaceState.xcuserstate
 Breakpoints_v2.xcbkptlist
-*.xcodeproj/xcuserdata
-*.xcworkspace/xcuserdata
+*.xcodeproj/xcuserdata/
+*.xcworkspace/
 
 # Pods
 Pods/

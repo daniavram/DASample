@@ -13,4 +13,9 @@ extension Array {
         guard (0 ..< count) ~= index else { return nil }
         return self[index]
     }
+    
+    func isIndexLast(_ index: Int) -> Bool {
+        let isIt = index == count - 1
+        return isIt
+    }
 }

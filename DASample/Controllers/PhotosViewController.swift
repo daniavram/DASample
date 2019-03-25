@@ -54,6 +54,11 @@ class PhotosViewController: UICollectionViewController, UIActivityIndicatable {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
     }
+    
+    override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        guard photos.isIndexLast(indexPath.item) else { return }
+        reload()
+    }
 }
 
 extension PhotosViewController: UICollectionViewDelegateFlowLayout {
@@ -77,7 +82,7 @@ extension PhotosViewController: UICollectionViewDelegateFlowLayout {
 
 extension PhotosViewController: PhotosDelegate {
     func didFetch(_ elements: [PhotosItem]) {
-        photos = elements
+        photos += elements
         collectionView.reloadData()
     }
 }
