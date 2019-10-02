@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -41,6 +41,7 @@
 		8EEB99AA2247E256004C01E0 /* PhotosCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EEB99A82247E256004C01E0 /* PhotosCell.xib */; };
 		8EEB99AC2247E2DC004C01E0 /* PhotosItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEB99AB2247E2DC004C01E0 /* PhotosItem.swift */; };
 		8EEB99AE2247E48D004C01E0 /* PhotosDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEB99AD2247E48D004C01E0 /* PhotosDelegate.swift */; };
+		8EFE1C9A23449A6E00882C2B /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFE1C9923449A6E00882C2B /* UIView+Constraints.swift */; };
 		DFA453A8E1F0E10C4530AD82 /* Pods_DASample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD5C2FFBB08DEBA4B5BD8F57 /* Pods_DASample.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +84,7 @@
 		8EEB99A82247E256004C01E0 /* PhotosCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotosCell.xib; sourceTree = "<group>"; };
 		8EEB99AB2247E2DC004C01E0 /* PhotosItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosItem.swift; sourceTree = "<group>"; };
 		8EEB99AD2247E48D004C01E0 /* PhotosDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosDelegate.swift; sourceTree = "<group>"; };
+		8EFE1C9923449A6E00882C2B /* UIView+Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		AD5C2FFBB08DEBA4B5BD8F57 /* Pods_DASample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DASample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -187,6 +189,7 @@
 		8EE61C7522478576009D36C8 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				8EFE1C9923449A6E00882C2B /* UIView+Constraints.swift */,
 				8EE61C7C2247868E009D36C8 /* UIStoryboardExtension.swift */,
 				8EE61C7E22478B73009D36C8 /* UIViewControllerExtension.swift */,
 				8EE61C8022478D55009D36C8 /* UIButtonExtension.swift */,
@@ -351,18 +354,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DASample/Pods-DASample-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-DASample/Pods-DASample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-DASample/Pods-DASample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -410,6 +406,7 @@
 				8EE61C7B2247863D009D36C8 /* PhotosViewController.swift in Sources */,
 				8EE61C8A2247B196009D36C8 /* ListItemView.swift in Sources */,
 				8EEB99A92247E256004C01E0 /* PhotosCell.swift in Sources */,
+				8EFE1C9A23449A6E00882C2B /* UIView+Constraints.swift in Sources */,
 				8EE61C7F22478B73009D36C8 /* UIViewControllerExtension.swift in Sources */,
 				8EE61C8322478F0C009D36C8 /* UIColorExtension.swift in Sources */,
 				8EEB999F2247C50B004C01E0 /* Fetcher.swift in Sources */,
